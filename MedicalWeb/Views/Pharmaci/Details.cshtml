@@ -1,0 +1,92 @@
+﻿@model MedicalWeb.Models.Pharmci
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Pharmci</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DisplayName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DisplayName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordHash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordHash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordSalt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordSalt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ZoneName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ZoneName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BloodType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BloodType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfBirth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastDonationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastDonationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RegistrationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegistrationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsFirstTimeDonor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsFirstTimeDonor)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

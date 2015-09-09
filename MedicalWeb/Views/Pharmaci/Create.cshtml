@@ -1,0 +1,116 @@
+﻿@model MedicalWeb.Models.Pharmci
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Pharmci</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserName)
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DisplayName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DisplayName)
+            @Html.ValidationMessageFor(model => model.DisplayName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PasswordHash)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PasswordHash)
+            @Html.ValidationMessageFor(model => model.PasswordHash)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PasswordSalt)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PasswordSalt)
+            @Html.ValidationMessageFor(model => model.PasswordSalt)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ZoneName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ZoneName)
+            @Html.ValidationMessageFor(model => model.ZoneName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BloodType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BloodType)
+            @Html.ValidationMessageFor(model => model.BloodType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateOfBirth)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateOfBirth)
+            @Html.ValidationMessageFor(model => model.DateOfBirth)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastDonationDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastDonationDate)
+            @Html.ValidationMessageFor(model => model.LastDonationDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegistrationDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegistrationDate)
+            @Html.ValidationMessageFor(model => model.RegistrationDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsFirstTimeDonor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsFirstTimeDonor)
+            @Html.ValidationMessageFor(model => model.IsFirstTimeDonor)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

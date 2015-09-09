@@ -1,0 +1,43 @@
+﻿@model MedicalWeb.Models.InvoiceClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>InvoiceClass</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pharmName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pharmName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.medicalName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.medicalName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.quantiti)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.quantiti)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,62 @@
+﻿@model MedicalWeb.Models.InvoiceClass
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>InvoiceClass</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pharmName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pharmName)
+            @Html.ValidationMessageFor(model => model.pharmName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.medicalName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.medicalName)
+            @Html.ValidationMessageFor(model => model.medicalName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.quantiti)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.quantiti)
+            @Html.ValidationMessageFor(model => model.quantiti)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.price)
+            @Html.ValidationMessageFor(model => model.price)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

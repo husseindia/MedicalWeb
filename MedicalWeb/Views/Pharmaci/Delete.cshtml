@@ -1,0 +1,96 @@
+﻿@model MedicalWeb.Models.Pharmci
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Pharmci</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DisplayName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DisplayName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordHash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordHash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordSalt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordSalt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ZoneName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ZoneName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BloodType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BloodType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfBirth)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastDonationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastDonationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RegistrationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegistrationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsFirstTimeDonor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsFirstTimeDonor)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
